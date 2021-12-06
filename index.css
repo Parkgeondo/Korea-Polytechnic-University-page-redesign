@@ -1,0 +1,115 @@
+
+/*메뉴바*/
+
+header {
+    height: 1100px !important;
+    background:linear-gradient(
+        to left,
+        rgba(20, 20, 20, 0) 10%,
+        rgba(20, 20, 20, 0.25) 25%,
+        rgba(20, 20, 20, 0.5) 50%,
+        rgba(20, 20, 20, 0.75) 75%,
+        rgba(20, 20, 20, 1) 100%
+    ), url(img/header_1.png);
+}
+
+/*제일 위에 있는 이미지*/
+
+header .hero{
+	width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-20px);
+}
+
+header .hero h1{
+    font-size: 64px;
+    color: var(--white-color);
+}
+
+header .hero div{
+    width: 218px;
+    height: 4px;
+    background: linear-gradient( to right, var(--key-color), var(--key-color3), var(--key-color2) );
+    margin-left: 12px;
+    margin-top: 24px;
+}
+
+header .hero p{
+    font-size: 16px;
+    color: lightgrey;
+    line-height: 240%;
+    margin-top: 54px;
+    margin-left: 10px;
+}
+
+/*학교교수진연구실적홍보*/
+
+main {
+    max-width: 1504px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_first {background-color: #F86C1E;margin-top: 100px; padding: 0 32px 0 32px;}
+.main_first h3{font-size: 36px; color: var(--title-color); font-weight: bold;display: inline-block; margin-bottom: 68px;}
+.main_first span{font-size: 24px; margin-left: 30px;}
+.main_first .item_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(336px,auto));
+    grid-auto-rows: minmax(354px, auto);
+    gap: 32px;
+}
+.main_first .item_container .item {border: #7fbe36 3px solid}
+.main_first .item_container .item a{display: block; width: 100%; height: 100%; background-color: chartreuse;}
+.main_first .item_container .item:nth-child(1){
+    grid-column: auto / span 2;
+    background-color: antiquewhite;
+}
+.main_first .item_container .item:nth-child(2){
+    grid-column: auto / span 1;
+    background-color: antiquewhite;
+}
+.main_first .item_container .item:nth-child(3){
+    grid-column: auto / span 1;
+    background-color: antiquewhite;
+}
+.main_first .item_container .item:nth-child(4){
+    grid-column: auto / span 1;
+    background-color: antiquewhite;
+}
+.main_first .item_container .item:nth-child(5){
+    grid-column: auto / span 1;
+    background-color: antiquewhite;
+}
+.main_first .item_container .item:nth-child(6){
+    grid-column: auto / span 2;
+    background-color: antiquewhite;
+}
+
+@media screen and (max-width: 1153px) {
+    .main_first .item_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr));
+        grid-auto-rows: minmax(354px, auto);
+        gap: 32px;
+    }
+    .main_first .item_container .item:nth-child(1){
+        order: 1;
+    }
+    .main_first .item_container .item:nth-child(2){
+        order: 2;
+    }
+    .main_first .item_container .item:nth-child(3){
+        order: 3;
+    }
+    .main_first .item_container .item:nth-child(4){
+        order: 5;
+    }
+    .main_first .item_container .item:nth-child(5){
+        order: 6;
+    }
+    .main_first .item_container .item:nth-child(6){
+        order: 4;
+    }
+}

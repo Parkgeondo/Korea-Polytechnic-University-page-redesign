@@ -1,0 +1,116 @@
+
+/*학교교수진연구실적홍보 첫번째 소개 페이지*/
+
+main {
+    max-width: 1504px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
+}
+
+header {
+    height: 600px !important;
+}
+
+.tab-inner {}
+.tabs {
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+.items {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.items div {
+    height: 100%;
+    width: 33.33333%;
+    float: left;
+}
+
+.items div:nth-child(1){
+    background: url('img/교수님\ 캐러셀_1.jpg') no-repeat center center/cover, rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+.items div:nth-child(2){
+    background: url('img/교수님\ 캐러셀_2.jpg') no-repeat center center/cover, rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+.items div:nth-child(3){
+    background: url('img/교수님\ 캐러셀_3.jpg') no-repeat center center/cover, rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    bottom: 24px;
+    transform: translateX(-36px);
+}
+.btn label {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+input[id=tab1]:checked ~ .tabs .items {
+    left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+    left: -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+    left: -200%;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1] {
+    background: chartreuse;
+}
+
+input[id=tab2]:checked ~ .btn label[for=tab2] {
+    background: chartreuse;
+}
+
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background: chartreuse;
+}
+/*제목 및 부 제목*/
+main h1 {font-size: 48px; margin-top: 50px; line-height: 160%;}
+/* 프로필 */
+
+/* 내용*/
+.info {}
+.info h3 {}
+.info p {text-align: justify;}
+.info .info_img {width: 827px; height: 369px; background-color: black; float: right; margin-left: 32px;}
+/* 이미지들*/
+.image {background-color: burlywood;}
+.images {}
+.image_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(336px,auto));
+    grid-auto-rows: minmax(218px, auto);
+    grid-auto-flow: dense;
+    gap: 32px;
+}
+.image_item {}
+.image_item:nth-child(1) {grid-column: auto / span 2; grid-row: auto/ span 2; background-color: cadetblue;}
+.image_item:nth-child(2) {grid-column: auto / span 2; grid-row: auto/ span 2; background-color: cadetblue;}
+.image_item:nth-child(3) {grid-column: auto / span 1; grid-row: auto/ span 1; background-color: cadetblue;}
+.image_item:nth-child(4) {grid-column: auto / span 2; grid-row: auto/ span 2; background-color: cadetblue;}
+.image_item:nth-child(5) {grid-column: auto / span 1; grid-row: auto/ span 1; background-color: cadetblue;}
+.image_item:nth-child(6) {grid-column: auto / span 1; grid-row: auto/ span 1; background-color: cadetblue;}
+.image_item:nth-child(7) {grid-column: auto / span 1; grid-row: auto/ span 1; background-color: cadetblue;}
